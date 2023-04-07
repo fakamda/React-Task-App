@@ -6,10 +6,13 @@ import TaskForm from "./components/TaskForm";
 function App() {
 
   return (
-    <div>
+    <main className="h-screen">
+      <div className='container mx-auto bg-zinc-800'>
       <TaskForm/>
       <TaskList/>
-    </div>
+      </div>
+    </main>
+
   );
 }
 
