@@ -5,7 +5,7 @@ import { useContext } from "react";
 function TaskList() {
   const {tasks, deleteTask} = useContext(TaskContext)
   if (tasks.lenght === 0) {
-    return <h1>No hay tareas aun</h1>;
+    return <h1 className="text-white text-xl font-bold">No hay tareas aun</h1>;
   }
 
   return (

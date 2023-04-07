@@ -17,20 +17,22 @@ function TaskForm() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="max-w-md mx-auto">
+      <form className="bg-zinc-900 p-10 mb-4 " onSubmit={handleSubmit}>
         <input
           placeholder="Escribe tu tarea"
           onChange={(e) => setTitle(e.target.value)}
           value={title}
           autoFocus
+          className="bg-slate-800 p-3 w-full mb-2 rounded"
         />
         <textarea
           placeholder="Escribe la descripcion de la tarea"
           onChange={(e) => setDescription(e.target.value)}
           value={description}
+          className="bg-slate-800 p-3 w-full mb-2 resize-none rounded"
         ></textarea>
-        <button>Guardar</button>
+        <button className="bg-red-600 px-3 py-1 text-white hover:bg-red-700">Guardar</button>
       </form>
     </div>
   );
