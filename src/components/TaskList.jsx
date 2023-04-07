@@ -1,15 +1,17 @@
-import TaksCard from "./TaksCard";
+import TaskContext from "../context/TaskContext";
+import TaskCard from "./TaskCard";
+import { useContext } from "react";
 
-function TaskList({tasks}) {
-
+function TaskList() {
+  const {tasks, deleteTask} = useContext(TaskContext)
   if (tasks.lenght === 0) {
-    <h1>No hay tareas aun</h1>
+    return <h1>No hay tareas aun</h1>;
   }
 
   return (
     <div>
       {tasks.map((task) => (
-        <TaksCard key={task.id} task={task}/>
+        <TaskCard key={task.id} task={task} />
       ))}
     </div>
   );
